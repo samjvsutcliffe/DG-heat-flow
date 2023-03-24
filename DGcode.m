@@ -12,7 +12,7 @@ fdNr = @(X)[X(2) - 1, - X(2) - 1, X(2) + 1, 1 - X(2); X(1) - 1, 1 - X(1), X(1) +
 % volume integral ---------------------------------------------------------
 ed = zeros(nnls,size(etpl,2));F = zeros(nnls*nov,1);
 krow = zeros(nnls*neDoF,1);kcol = krow; kval= krow;                         % dof matrix, and column storage variables
-a  = 1/sqrt(3); gpv = [-a a a -a;-a -a a a]'; wp = 1; ngp=4;                % Gauss point locations
+a  = 1/sqrt(3); gpv = [0]'; wp = 1; ngp=1;                % Gauss point locations
 kloc = 0;
 for nel = 1:nnls                                                            % Looping over all the elements
     ke = zeros(nov);                                                        % Local stiffness matrix
